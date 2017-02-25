@@ -1,11 +1,24 @@
 Package: VCM
 Type: Package
-Title: What the Package Does (Title Case)
+Title: A R package for the paper written by HAIQIANG CHEN, YING FANG, AND YINGXING LI
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Author: Elara<elara15598@gmail.com>
+Maintainer: Elara<elara15598@gmail.com>
+Description: A R package for the paper written by HAIQIANG CHEN, YING FANG, AND YINGXING LI.
+License: GPL-2
 Encoding: UTF-8
 LazyData: true
+Date: 2017-02-26
+Depends:
+    R (>= 3.2.3),
+    lme4,
+    RLRsim,
+    nlme,
+    splines
+Collate:
+    'beta.R'
+    'LRTval.R'
+    'val.R'
+    'valcv.R'
+    'valpredict.R'
+RoxygenNote: 5.0.1
