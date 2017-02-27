@@ -18,7 +18,7 @@ val <- function(x,z,y,p,nknots,m=2,lambda=NULL,cv=FALSE,sigma_error=diag(1,lengt
     lamb <- seq(0,10,0.01)
     mse <-rep(NA,length(lamb))
     for(i in 1:length(lamb)){
-      mse[i] <- .valcv(x=x,z=z,y=y,p=p,nknots=nknots,
+      mse[i] <- .valcv(x=x,z=z,y=y,p=p,nknots=nknots,m=m,
                       lambda=lamb[i],sigma_error=diag(1,length(y)),Dm=Dm)
     }
     lambda<- lamb[which(mse==min(mse))]

@@ -1,4 +1,4 @@
-.beta <- function(x,z,y,p,nknots,lambda,sigma_error=diag(1,length(y)),Dm){
+.beta <- function(x,z,y,p,nknots,m=2,lambda,sigma_error=diag(1,length(y)),Dm){
   n <- length(y)
   df1 <- nknots+p
   Psi <- bs(z,df=df1,degree = p)
