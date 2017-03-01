@@ -1,5 +1,5 @@
 # demo
-
+library(VCM)
 # 设定样本数
 n=400
 # 生成z
@@ -16,7 +16,7 @@ y <- x*theta(z)+u
 # 指定lambda建模
 model <- val(x,z,y,p=3,nknots=20,lambda = 0.01)
 # 不指定lambda建模
-model <- val(x,z,y,p=3,nknots=20)
+model <- val(x,z,y,p=3,nknots=20) #运行用时较久
 # 具体参数可以查看帮助文档
 help(val)
 
