@@ -14,7 +14,8 @@ Depends:
     lme4,
     RLRsim,
     nlme,
-    splines
+    splines,
+    Matrix
 Collate:
     'beta.R'
     'LRTval.R'

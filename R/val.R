@@ -1,3 +1,14 @@
+#' Estimate the coefficients
+#'
+#' @title Estimate the coefficients
+#' @param x predictors, a vector
+#' @param y dependent variable, a vector
+#' @param z assist variable, a vector
+#' @param p order of B-splines
+#' @param nkonts the number of knots
+#' @param m order of penalty term, m = 2 by default
+#' @param lambda coefficient of penalty term, need to be specified
+#' @param sigma_error covariance matrix of disturbance term u
 #' @export
 
 val <- function(x,z,y,p,nknots,m=2,lambda=NULL,cv=FALSE,sigma_error=diag(1,length(y))){

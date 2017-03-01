@@ -1,9 +1,22 @@
+#' Testing whether need to use varying coefficience
+#'
+#' @title Testing whether need to use varying coefficience
+#' @param X predictors, a vector
+#' @param Y dependent variable, a vector
+#' @param Z assist variable, a vector
+#' @param p order of B-splines, p = 1 by default
+#' @param nkonts the number of knots
+#' @param df the numbers of constraint of fixed coefficient, df = 1 by default, can't be larger than p
+#' @param sigma.output covariance matrix of disturbance term u
 #' @export
 
-LRTval=function(X, Z, Y, p=1,nknots=10,df,sigma.output=diag(rep(1, length(Y)))){
+LRTval=function(X, Z, Y, p=1,nknots=10,df = 1,sigma.output=diag(rep(1, length(Y)))){
   require(lme4)
   require(RLRsim)
   require(nlme)
+  if(df > p){
+    stop("df should not larger than p")
+  }
   n=length(Y)
   x1 <- diag(X)
   z1 <- rep(1,n)
