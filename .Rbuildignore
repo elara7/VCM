@@ -1,2 +1,6 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
+^.*\.zip$
+^.*\.tar.gz$
+^.*\.md$
+^.*\.R$
